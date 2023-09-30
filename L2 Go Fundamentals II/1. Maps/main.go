@@ -15,4 +15,11 @@ func main() {
 	dictionary["Gopher"] = "The fuzzy mascot for Go."
 	dictionary["Map"] = "An unordered data structure with key-value pairs"
 	fmt.Println(dictionary)
+
+	for word, info := range dictionary {
+		fmt.Printf("%s means %s\n", word, info)
+	}
+
+	delete(dictionary, "Map")
+	fmt.Println(dictionary)
 }
