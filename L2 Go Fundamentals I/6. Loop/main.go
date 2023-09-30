@@ -9,5 +9,10 @@ func main() {
 	}
 
 	// outra forma
-	
+	i := 0
+
+	for i <= 20 {
+		fmt.Println(i)
+		i++
+	}
 }
