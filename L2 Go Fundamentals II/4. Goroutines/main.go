@@ -1,11 +1,14 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func showMessage(message string) {
 	for i := 0; i <= 5; i++ {
 		time.Sleep(1 * time.Second)
-		println(message)
+		fmt.Println(message)
 	}
 }
 
@@ -13,5 +16,6 @@ func main() {
 
 	go showMessage("Go is a great programming language.")
 
-	showMessage("Welcome, Gophers!")
+	go showMessage("Welcome, Gophers!")
+	time.Sleep(5 * time.Second)
 }
