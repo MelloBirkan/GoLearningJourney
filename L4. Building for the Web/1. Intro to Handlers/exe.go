@@ -12,6 +12,7 @@ func index2(w http.ResponseWriter, r *http.Request) {
 }
 
 func cityList(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "<a href=/>Home</br><a>")
 	fmt.Fprintln(w, "List of most populous cities:")
 	for _, city := range cities {
 		fmt.Fprintln(w, city)
